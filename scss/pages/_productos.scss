@@ -1,0 +1,106 @@
+.container-portadafonzo {
+  background: rgb(63, 94, 251);
+  background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ecommerce {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+
+  &-box {
+    flex-basis: 30%;
+    padding: 20px;
+    background-color: $color-secundario;
+    text-align: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+
+    & img {
+      max-width: 100%;
+      height: 250px;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+    }
+  }
+}
+
+.btn-comprar {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  border-radius: 10%;
+  color: $color-primario;
+  text-decoration: none;
+  margin-top: 10px;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+
+}
+
+.background-imagen-productos {
+  background-color: #FA8BFF;
+  background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.text-container-productos {
+  padding: 50px;
+  color: black;
+  text-align: center;
+
+  & h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+
+  & p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .ecommerce {
+    display: flex;
+    flex-flow: wrap;
+  }
+
+  .ecommerce-box {
+    flex-basis: 40%;
+    /* Reducir el ancho de los productos en pantallas pequeñas */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .ecommerce {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ecommerce-box {
+    width: 90%;
+
+  }
+}

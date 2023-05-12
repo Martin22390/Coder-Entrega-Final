@@ -1,0 +1,39 @@
+.propaganda {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $color-secundario;
+  padding: 50px;
+  margin-top: 20px;
+}
+
+.texto {
+  flex: 1;
+  padding: 20px;
+  text-align: justify;
+}
+
+.img-propaganda {
+  flex: 2;
+
+  & img {
+    border-radius: 5%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .propaganda {
+    flex-direction: column;
+  }
+
+  .texto {
+    order: 1;
+    flex-basis: 100%;
+  }
+
+  .img-propaganda {
+    order: 2;
+    flex-basis: 100%;
+  }
+}
