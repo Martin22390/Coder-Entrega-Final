@@ -461,6 +461,41 @@ img.modelos-img {
   border-radius: 10%;
 }
 
+.article-section {
+  background-image: url(../imagenes/simpsons_banner_homero.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 40px;
+  margin-top: 15px;
+}
+
+.article-content {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+.article-content p {
+  background-color: #1c6ea4;
+  color: #fff;
+  border-radius: 10%;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.register-btn {
+  background-color: #1c6ea4;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+.register-btn:hover {
+  background-color: #155d8c;
+}
+
 .cart {
   display: flex;
   flex-direction: column;
