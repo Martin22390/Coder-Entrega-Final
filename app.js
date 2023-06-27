@@ -39,49 +39,76 @@ const productos = [
     }
   ];
 
-  // Variable para almacenar los productos en el carrito
+
 let carrito = [];
 
-// Función para agregar un producto al carrito
+/* Comenzamos función para agregar un producto al carrito */
 function agregarAlCarrito(nombreProducto) {
-  // Buscar el producto en el array por su nombre
+  /* Buscar el producto en el array por su nombre */
   const producto = productos.find(function(p) {
     return p.nombre === nombreProducto;
   });
 
-  // Verificar si el producto ya está en el carrito
+  /* me fijo  si el producto ya está en el carrito */
   const productoExistente = carrito.find(function(item) {
     return item.nombre === nombreProducto;
   });
 
   if (productoExistente) {
-    // Si el producto ya está en el carrito, aumentar la cantidad
+
     productoExistente.cantidad++;
   } else {
-    // Si el producto no está en el carrito, agregarlo
+
     carrito.push({ ...producto, cantidad: 1 });
   }
 
-   // Mostrar el carrito actualizado (puedes personalizar esto según tus necesidades)
+  // Guardar el carrito en el almacenamiento local CHATGPT
+  localStorage.setItem('carrito', JSON.stringify(carrito));
+
   console.log('Carrito actualizado:', carrito);
 
-  calcularTotalCarrito()
-  
+  calcularTotalCarrito();
 }
 
-  function calcularTotalCarrito() {
-    // Variable para almacenar el precio total
-    let precioTotal = 0;
+function calcularTotalCarrito() {
   
-    // Recorrer los productos en el carrito
+  let precioTotal = 0;
+
+  carrito.forEach(function(producto) {
+    
+    const precioProducto = producto.precio * producto.cantidad;
+
+    precioTotal += precioProducto;
+  });
+  
+
+  console.log('Precio total del carrito:', precioTotal);
+}
+
+/* CODIGO CON CHAT GPT PRUEBA*/
+document.addEventListener('DOMContentLoaded', function() {
+  // Obtener el carrito del almacenamiento local
+  const carrito = JSON.parse(localStorage.getItem('carrito'));
+
+  // Verificar si el carrito existe
+  if (carrito && carrito.length > 0) {
+    const carritoContainer = document.getElementById('carrito-container');
+    let carritoHTML = '';
+
+    // Generar el contenido HTML del carrito html ya utilizado en desarroloweb
     carrito.forEach(function(producto) {
-      // Calcular el precio total del producto (precio * cantidad)
-      const precioProducto = producto.precio * producto.cantidad;
-  
-      // Sumar el precio del producto al precio total
-      precioTotal += precioProducto;
+      carritoHTML += '<div class="cart-item">';
+      carritoHTML += `<img src="https://via.placeholder.com/100x100" alt="${producto.nombre}">`;
+      carritoHTML += '<div class="cart-item-info">';
+      carritoHTML += `<h3>${producto.nombre}</h3>`;
+      carritoHTML += `<p>Precio: $${producto.precio}</p>`;
+      carritoHTML += `<p>Cantidad: ${producto.cantidad}</p>`;
+      carritoHTML += '</div>';
+      carritoHTML += '<button class="cart-item-remove">Eliminar</button>';
+      carritoHTML += '</div>';
     });
-  
-    // Mostrar el precio total en la consola
-    console.log('Precio total del carrito:', precioTotal);
+
+    // Insertar el contenido HTML en el contenedor del carrito
+    carritoContainer.innerHTML = carritoHTML;
   }
+});

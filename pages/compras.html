@@ -42,50 +42,18 @@
     <section class="cart">
       <h3>Carrito de compras</h3>
       <div class="cart-seccion">
-        <div class="cart-item">
-          <img src="https://via.placeholder.com/100x100" alt="Producto 1">
-          <div class="cart-item-info">
-            <h3>Producto 1</h3>
-            <p>Precio: $20</p>
-            <p>Cantidad: 1</p>
-          </div>
-          <button class="cart-item-remove">Eliminar</button>
-        </div>
-        <div class="cart-item">
-          <img src="https://via.placeholder.com/100x100" alt="Producto 2">
-          <div class="cart-item-info">
-            <h3>Producto 2</h3>
-            <p>Precio: $30</p>
-            <p>Cantidad: 2</p>
-          </div>
-          <button class="cart-item-remove">Eliminar</button>
-        </div>
-        <div class="cart-item">
-          <img src="https://via.placeholder.com/100x100" alt="Producto 2">
-          <div class="cart-item-info">
-            <h3>Producto 2</h3>
-            <p>Precio: $30</p>
-            <p>Cantidad: 2</p>
-          </div>
-          <button class="cart-item-remove">Eliminar</button>
-        </div>
-        <div class="cart-item">
-          <img src="https://via.placeholder.com/100x100" alt="Producto 2">
-          <div class="cart-item-info">
-            <h3>Producto 2</h3>
-            <p>Precio: $30</p>
-            <p>Cantidad: 2</p>
-          </div>
-          <button class="cart-item-remove">Eliminar</button>
-        </div>
-        <div class="cart-item">
-          <img src="https://via.placeholder.com/100x100" alt="Producto 2">
-          <div class="cart-item-info">
-            <h3>Producto 2</h3>
-            <p>Precio: $30</p>
-            <p>Cantidad: 2</p>
-          </div>
-          <button class="cart-item-remove">Eliminar</button>
+        <div id="carrito-container" class="cart-item">
+      <!--
+      carritoHTML += '<div class="cart-item">';
+      carritoHTML += `<img src="https://via.placeholder.com/100x100" alt="${producto.nombre}">`;
+      carritoHTML += '<div class="cart-item-info">';
+      carritoHTML += `<h3>${producto.nombre}</h3>`;
+      carritoHTML += `<p>Precio: $${producto.precio}</p>`;
+      carritoHTML += `<p>Cantidad: ${producto.cantidad}</p>`;
+      carritoHTML += '</div>';
+      carritoHTML += '<button class="cart-item-remove">Eliminar</button>';
+      carritoHTML += '</div>';
+      -->
         </div>
       </div>
       <div class="cart-total">
@@ -133,6 +101,7 @@
       </div>
     </div>
   </footer>
+  <script src="../app.js"></script>
 </body>
 
 </html>
