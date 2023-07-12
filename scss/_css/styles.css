@@ -87,14 +87,14 @@ p {
 }
 
 #itemCarrousel-1 {
-  background-image: url(../imagenes/funzo_abrazogif.gif);
+  background-image: url(../imagenes/funzoabrazogif.gif);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
 }
 
 #itemCarrousel-2 {
-  background-image: url(../imagenes/funzo_nuevo.gif);
+  background-image: url(../imagenes/giphy3flor.gif);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -579,6 +579,16 @@ img.modelos-img {
   .cart-item {
     margin: 5px;
     gap: 10px;
+  }
+}
+.cart-item {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 768px) {
+  .cart-item {
+    flex-direction: column;
   }
 }
 .contacto {

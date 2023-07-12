@@ -94,3 +94,13 @@
   }
 
 }
+.cart-item {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 768px) {
+  .cart-item {
+    flex-direction: column;
+  }
+}
