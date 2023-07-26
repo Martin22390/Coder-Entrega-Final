@@ -1,0 +1,41 @@
+{
+    "productos": [
+      {
+        "nombre": "Fonzo-azul",
+        "precio": 12999,
+        "color": "Azul",
+        "idioma": "Castellano"
+      },
+      {
+        "nombre": "Fonzo-rosa",
+        "precio": 12999,
+        "color": "Rosa",
+        "idioma": "Castellano"
+      },
+      {
+        "nombre": "Fonzo-violeta",
+        "precio": 12999,
+        "color": "Violeta",
+        "idioma": "Castellano"
+      },
+      {
+        "nombre": "Fonzo-azul-ingles",
+        "precio": 15999,
+        "color": "Azul",
+        "idioma": "Inglés"
+      },
+      {
+        "nombre": "Fonzo-rosa-ingles",
+        "precio": 15999,
+        "color": "Rosa",
+        "idioma": "Ingles"
+      },
+      {
+        "nombre": "Fonzo-violeta-ingles",
+        "precio": 15999,
+        "color": "Violeta",
+        "idioma": "Inglés"
+      }
+    ]
+  }
+  

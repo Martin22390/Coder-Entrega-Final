@@ -87,7 +87,12 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
   function mostrarMensajeBienvenida(nombre) {
-    // Mostrar un mensaje de bienvenida mediante un alert
-    alert(`¡Bienvenido/a, ${nombre}! Gracias por registrarte en Fonzi.`);
+    // Utiliza SweetAlert2 para mostrar un mensaje de bienvenida personalizado
+    Swal.fire({
+      title: `¡Bienvenido/a, ${nombre}!`,
+      text: 'Gracias por registrarte en Fonzi.',
+      icon: 'success',
+      confirmButtonText: 'Aceptar'
+    });
   }
   
